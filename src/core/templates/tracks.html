@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Tracks</title>
+   </head>
+   <body>
+       <h1>Tracks</h1>
+       <ul>
+           {% for track in tracks %}
+           <li>{{ track[1] }} by {{ track[2] }}</li>
+           {% endfor %}
+       </ul>
+   </body>
+   </html>
