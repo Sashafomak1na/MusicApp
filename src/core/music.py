@@ -1,7 +1,5 @@
 import sqlite3
 
-
-def init_db():
     conn = sqlite3.connect('music_app.db')
     cursor = conn.cursor()
 
@@ -20,7 +18,6 @@ def init_db():
            title TEXT NOT NULL,
            artist TEXT NOT NULL,
            album TEXT,
-           duration INTEGER
        )
        ''')
 
@@ -34,25 +31,5 @@ def init_db():
        )
        ''')
 
-    cursor.execute('''
-       INSERT INTO tracks (
-                       title,
-                       artist,
-                       album,
-                       duration
-                   )
-                   VALUES (
-                       'title',
-                       'artist',
-                       'album',
-                       'duration'
-                   );
-
-       ''')
-
     conn.commit()
     conn.close()
-
-
-if __name__ == '__main__':
-    init_db()
